@@ -1,7 +1,7 @@
-import{u as r,t as o,j as e,L as n}from"./index-29cbaff3.js";const a=r.div`
+import{u as r,t as o,j as e,L as n}from"./index-b10f9492.js";const a=r.div`
   display: flex;
   justify-content: flex-end;
-  background-image: url("/public/hero.webp");
+  background-image: url('/hero.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,8 @@ import{u as r,t as o,j as e,L as n}from"./index-29cbaff3.js";const a=r.div`
   font-size: 40px;
   color: ${o.colors.hoverColor};
   text-align: center;
-  text-shadow: -0.5px -0.5px 0 rgba(255, 255, 255, 0.5),
+  text-shadow:
+    -0.5px -0.5px 0 rgba(255, 255, 255, 0.5),
     0.5px -0.5px 0 rgba(255, 255, 255, 0.5),
     -0.5px 0.5px 0 rgba(255, 255, 255, 0.5),
     0.5px 0.5px 0 rgba(255, 255, 255, 0.5);
