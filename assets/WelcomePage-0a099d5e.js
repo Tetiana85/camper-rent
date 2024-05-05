@@ -1,7 +1,7 @@
-import{u as r,t as o,j as e,L as n}from"./index-b10f9492.js";const a=r.div`
+import{u as r,t as o,j as e,L as n}from"./index-ee9941a3.js";const a=r.div`
   display: flex;
   justify-content: flex-end;
-  background-image: url('/hero.webp');
+  background-image: url('./hero.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
