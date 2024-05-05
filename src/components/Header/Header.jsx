@@ -1,4 +1,4 @@
-import { Header, Link, NavList, IconWrapper } from "./Header.styled";
+import { Header, Link, NavList, IconWrapper } from './Header.styled';
 
 const HeaderLayout = () => {
   return (
@@ -9,7 +9,7 @@ const HeaderLayout = () => {
             <Link to="/">
               <IconWrapper>
                 <img
-                  src="/campers-logo.svg"
+                  src="./campers-logo.svg"
                   alt="Logo"
                   width={40}
                   height={40}

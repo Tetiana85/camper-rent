@@ -4,7 +4,7 @@ import { theme } from '../../theme';
 export const WelcomeWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  background-image: url('/hero.webp');
+  background-image: url('./hero.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   CarImage,
   Desctiption,
@@ -9,13 +9,13 @@ import {
   PriceContainer,
   ShowMoreBtn,
   TagsContainer,
-} from "../Car/Car.styled";
-import { Icon } from "../Icon/Icon";
-import { CarModal } from "../CarModal/CarModal";
-import { Details } from "../Details/Details";
-import { useDispatch } from "react-redux";
-import { toggleFavourite } from "../../redux/cars/carsSlice";
-import { useIsFavourite } from "../../hooks/useIsFavourite";
+} from '../Car/Car.styled';
+import { Icon } from '../Icon/Icon';
+import { CarModal } from '../CarModal/CarModal';
+import { Details } from '../Details/Details';
+import { useDispatch } from 'react-redux';
+import { toggleFavourite } from '../../redux/cars/carsSlice';
+import { useIsFavourite } from '../../hooks/useIsFavourite';
 
 export const FavouriteCar = ({ favCar }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ export const FavouriteCar = ({ favCar }) => {
       <CarImage
         $bgImage={
           favCar.gallery[0] ||
-          "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"
+          'https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg'
         }
       ></CarImage>
       <div>
@@ -52,7 +52,7 @@ export const FavouriteCar = ({ favCar }) => {
               <Icon
                 width={24}
                 height={24}
-                iconId={isFavourite ? "heart-red" : "heart"}
+                iconId={isFavourite ? 'heart-red' : 'heart'}
               />
             </FavouriteButton>
           </PriceContainer>

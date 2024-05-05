@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
-import { FilterButton } from "../FilterButton/FilterButton";
+import { useDispatch } from 'react-redux';
+import { FilterButton } from '../FilterButton/FilterButton';
 import {
   CategoriesLine,
   CategoriesText,
@@ -9,13 +9,13 @@ import {
   SearchButton,
   InputWrapper,
   StyledInput,
-} from "./Filters.styled";
-import { changeInputFilter } from "../../redux/filter/filterSlice";
-import styled from "styled-components";
+} from './Filters.styled';
+import { changeInputFilter } from '../../redux/filter/filterSlice';
+import styled from 'styled-components';
 
 const SVGIcon = ({ iconId, width, height, className }) => (
   <svg className={className} width={width} height={height}>
-    <use href={`/sprite.svg#${iconId}`}></use>
+    <use href={`./sprite.svg#${iconId}`}></use>
   </svg>
 );
 
