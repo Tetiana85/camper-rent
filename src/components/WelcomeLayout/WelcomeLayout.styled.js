@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { theme } from "../../theme";
+import styled from 'styled-components';
+import { theme } from '../../theme';
 
 export const WelcomeWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  background-image: url("/public/hero.webp");
+  background-image: url('/hero.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,8 @@ export const Title = styled.h1`
   font-size: 40px;
   color: ${theme.colors.hoverColor};
   text-align: center;
-  text-shadow: -0.5px -0.5px 0 rgba(255, 255, 255, 0.5),
+  text-shadow:
+    -0.5px -0.5px 0 rgba(255, 255, 255, 0.5),
     0.5px -0.5px 0 rgba(255, 255, 255, 0.5),
     -0.5px 0.5px 0 rgba(255, 255, 255, 0.5),
     0.5px 0.5px 0 rgba(255, 255, 255, 0.5);
