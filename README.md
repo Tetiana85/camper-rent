@@ -1,108 +1,81 @@
-# React + Vite template
+# Camper Rent Ukraine
 
-Цей проєкт було створено за допомогою [Create Vite](https://vitejs.dev/). Для
-знайомства і налаштування додаткових можливостей
-[звернися до документації](https://vitejs.dev/guide/).
+This application allows users to browse and rent campers available for rental in
+Ukraine. It consists of three main pages:
 
-## Створення репозиторію за шаблоном
+1. **Home Page**: Provides general information about the services offered by the
+   company.
+2. **Catalog Page**: Displays a catalog of campers of various configurations
+   that users can filter by location, equipment, and type.
+3. **Favorites Page**: Displays a list of advertisements that users have added
+   to their favorites.
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проєкту. Для цього натисни на кнопку `"Use this template"` і
-обери опцію `"Create a new repository"`, як показано на зображенні.
+### Technical Details
 
-![Creating repo from a template step 1](./src/assets/template-step-1.png)
+#### Frontend
 
-На наступному кроці відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся що репозиторій публічний, після чого натисни кнопку
-`"Create repository from template"`.
+- **React**: The application is built using React framework.
+- **Redux Toolkit**: Redux Toolkit is used for state management.
+- **React Router**: Used for routing between different pages.
+- **Axios**: Axios is used for making HTTP requests.
+- **Formik and Yup**: Utilized for form management and validation.
+- **Date-fns**: Used for date manipulation.
+- **React Datepicker**: Provides a date picker component for selecting dates.
 
-![Creating repo from a template step 2](./src/assets/template-step-2.png)
+#### Backend
 
-Після того як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+- **MockAPI**: A custom backend is created using MockAPI service to simulate
+  backend functionality.
+- **Adverts Resource**: The application uses the Adverts resource in MockAPI to
+  store and retrieve camper advertisements.
 
-![Settings GitHub Actions permissions step 1](./src/assets/gh-actions-perm-1.png)
+### Features
 
-Проскроливши сторінку до самого кінця, у секції `"Workflow permissions"` вибери
-опцію `"Read and write permissions"` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проєкту.
+1. **Advertisement Card**: Each advertisement card displays information about a
+   camper available for rental, including name, price, rating, location,
+   specifications, description, gallery images, and reviews.
+2. **Pagination**: The catalog page displays four advertisements initially, and
+   additional advertisements can be loaded by clicking the "Load more" button.
+3. **Favorites**: Users can add advertisements to their favorites list by
+   clicking the heart icon on the advertisement card. The button's color changes
+   to indicate whether an advertisement is favorited or not.
+4. **Modal Window**: Clicking on the "Show more" button opens a modal window
+   displaying detailed information about the camper, including photos, detailed
+   specifications, and reviews. The modal window can be closed by clicking the
+   close button, clicking outside the modal window, or pressing the Escape key.
+5. **Booking Form**: The modal window includes a booking form with fields for
+   name, email, booking date, comments, and any other necessary details. The
+   form fields are validated, and the form submission is handled accordingly.
+6. **Persistent Storage**: User preferences, including favorite advertisements
+   and filters, are saved in the local storage for a seamless user experience.
 
-![Settings GitHub Actions permissions step 2](./src/assets/gh-actions-perm-2.png)
+### How to Run the Application
 
-Тепер у тебе є особистий репозиторій проєкту, зі структурою файлів і папок
-репозиторія-шаблону. Далі працюй з ним як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби комміти і відправляй
-їх на GitHub.
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server using `npm run dev`.
 
-## Підготовка до роботи
+### Deployment
 
-1. Переконайся, що на комп'ютері встановлена LTS-версія Node.js.
-   [Скачай і встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встановіть базові залежності проекту командою `npm install`.
-3. Запустіть режим розробки, виконавши команду `npm run dev`.
-4. Перейди в браузері за адресою, що зазначено в терміналі.
+The project is deployed on GitHub Pages for demonstration purposes.
 
-## Деплой
+### Support
 
-Продакшн версія проєкту буде автоматично збиратися і деплоїтися на GitHub Pages,
-у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад, після
-прямого пушу або прийнятого пул-реквесту. Для цього необхідно у файлі
-`vite.config.js` відредагувати поле `base`, замінивши `react_vite` на свою назву
-репозиторію `"/your_repo_name"`, і відправити зміни на GitHub.
+For any issues or inquiries, please contact
+[luzhanska.tetiana@gmail.com](luzhanska.tetiana@gmail.com).
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) і
-виставити роздачу продакшн версії файлів із папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+### Acknowledgments
 
-![GitHub Pages settings](./src/assets/repo-settings.png)
+Special thanks to [MockAPI](https://www.mockapi.io/) for providing a convenient
+tool for mocking APIs.
 
-### Статус деплоя
+### Resources
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
-
-- **Жовтий колір** - виконується збірка і деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час збирання або деплою сталася помилка.
-
-Детальнішу інформацію про статус можна подивитися, клікнувши на іконку, і в
-випадаючому вікні перейти за посиланням `Details`.
-
-![Deployment status](./src/assets/deploy-status.png)
-
-### Жива сторінка
-
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною в налаштуваннях GitHub-репозиторію (`Settings` > `Pages`).
-
-![GitHub-pages URL](./src/assets/gh-pages-url.png)
-
-Якщо відкривається порожня сторінка, переконайся що у вкладці `Console` немає
-помилок пов'язаних із неправильними шляхами до CSS і JS файлів проекту
-(**404**). Швидше за все найімовірніше, у тебе неправильне значення поля `base`
-у файлі `vite.config.js`.
-
-### Маршрутизація
-
-Якщо додаток використовує бібліотеку `react-router-dom` для маршрутизації,
-необхідно додатково налаштувати компонент `<BrowserRouter>`, передавши в пропе
-`basename` точну назву твого репозиторію. Слеш на початку рядка обов'язковий.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-### Додавання змінних в  .env
-Для зберігання конфігураційних даних, таких як API ключі, адреси серверів, порти та інші змінні використовуйте файл `.env`. Для цього необхідно з назви файлу `.env.template` видалити зайві ".template",після чого файл відповідатиме умовам файлу `.ignore` і буде зберігатися лише локально, не публікуючись на віддаленому репозиторії з метою безпеки. Задля використання змінних на GitHub-pages усі змінні, передбачені файлом .env, слід додати до файлу `.github/workflows/deploy.yml`, а також до налаштувань репозиторію. Для цього слід перейти (`Settings` > `Secrets and variables` > `Actions`)
-
-![Add enviroments from .env](./src/assets/secrets.png)
-
-## Як це працює
-
-1. Після кожного пушу в гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) з файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проєкт ініціалізується і
-   проходить збірку перед деплоєм. 3 Якщо всі кроки пройшли успішно, зібрана
-   продакшн-версія файлів проєкту відправляється в гілку `gh-pages`. В іншому
-   випадку, в логах виконання скрипта буде вказано в чому проблема.
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Redux Toolkit Documentation](https://redux-toolkit.js.org/introduction/getting-started)
+- [React Router Documentation](https://reactrouter.com/)
+- [Axios Documentation](https://axios-http.com/docs/intro)
+- [Formik Documentation](https://formik.org/docs/overview)
+- [Yup Documentation](https://github.com/jquense/yup)
+- [Date-fns Documentation](https://date-fns.org/docs/)
+- [React Datepicker Documentation](https://www.npmjs.com/package/react-datepicker)

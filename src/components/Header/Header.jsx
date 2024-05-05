@@ -1,29 +1,35 @@
-import {
-  HeaderContainer,
-  Navigation,
-  StyledLink,
-  IconWrapper,
-} from './Header.styled';
-import sprite from 'assets/sprite.svg';
+import { Header, Link, NavList, IconWrapper } from "./Header.styled";
 
-export const Header = () => {
-
+const HeaderLayout = () => {
   return (
-    <HeaderContainer>
-      <Navigation>
-        <StyledLink to="/first">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          First
-        </StyledLink>
-        <StyledLink to="/second">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          Second
-        </StyledLink>
-      </Navigation>
-    </HeaderContainer>
+    <>
+      <Header>
+        <NavList>
+          <li>
+            <Link to="/">
+              <IconWrapper>
+                <img
+                  src="/campers-logo.svg"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                />
+              </IconWrapper>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/catalog">Catalog</Link>
+          </li>
+          <li>
+            <Link to="/favourite">Favorites</Link>
+          </li>
+        </NavList>
+      </Header>
+    </>
   );
 };
+
+export default HeaderLayout;
